@@ -17,11 +17,9 @@ def view_tasks():
 
 def duplicate_task(task):
     if task in task_list:
-        return "already exist"
-        
+        return "Task already exists"
     else:
-        task_list.append(task)
-        return task
+        return add_task(task)
     
 
 def main():
