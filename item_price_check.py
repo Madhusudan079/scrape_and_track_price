@@ -42,8 +42,6 @@ def send_email(receiver_email, subject, body):
     except Exception as e:
         print(f"Failed to send email: {e}")
 
-# send_email("souravsharma7976@gmail.com", "Test Email", "This is a test email from Python")
-
 
 # Connect to MongoDB with SSL Certificate
 try:
@@ -83,7 +81,7 @@ def scrape_and_track():
                 if existing_document["price"] != price_text:
                     # If price is different, update it
                     # print(f"Alert: Price change detected for '{name_text}'. Current price is {price_text} and previous price was {existing_document['price']}")
-                    send_email("souravsharma7976@gmail.com", "Price Change Alert", f"Price change detected for '{name_text}'. Current price is {price_text} and previous price was {existing_document['price']} and product link is {link_text}")
+                    send_email("test@gmail.com", "Price Change Alert", f"Price change detected for '{name_text}'. Current price is {price_text} and previous price was {existing_document['price']} and product link is {link_text}")
                     collection.update_one(
                         {"name": name_text},  # Filter criteria
                         {"$set": {"price": price_text}}  # Update operation
