@@ -17,8 +17,8 @@ load_dotenv()
 
 MONGO_URI = os.getenv("MONGO_URI")
 
-EMAIL_ADDRESS = 'madhusudan07.code@gmail.com'
-EMAIL_PASSWORD = 'pnlr bdta shwz atpm'
+EMAIL_ADDRESS = ''
+EMAIL_PASSWORD = ''
 
 def send_email(receiver_email, subject, body):
     try:
